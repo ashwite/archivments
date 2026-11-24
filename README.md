@@ -29,6 +29,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for starter tasks and the [publishing gui
 
 ## Run the Node.js example locally
 
+Use Node.js 24 to match the CI example. 
+
 From the repository root, run:
 
 ```sh
