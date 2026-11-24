@@ -26,3 +26,13 @@ The converter reports unsupported fields, actions and GitHub expressions. Review
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for starter tasks and the [publishing guide](PUBLISHING.md) for setup on both platforms.
+
+## Run the Node.js example locally
+
+From the repository root, run:
+
+```sh
+npm --prefix examples/node ci
+npm --prefix examples/node test
+npm --prefix examples/node run build
+```
