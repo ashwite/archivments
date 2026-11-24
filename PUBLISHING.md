@@ -29,3 +29,7 @@ Prüfe anschließend **Actions** auf GitHub und **Build → Pipelines** auf GitL
 Maintainer oder Owner einer GitLab-Gruppe können eigene Profil-Achievements erstellen und vergeben. Für dieses Projekt passen etwa **Erste Migration**, **Erster gemergter MR** und **Neue CI-Funktion beigetragen**. Lege Kriterien fest und vergib die Auszeichnungen nach dem jeweiligen Beitrag. Empfänger müssen die Auszeichnung gegebenenfalls annehmen. Für ein Achievement einer anderen Gruppe ist deren Vergabe entscheidend.
 
 [GitLab-Dokumentation zu Achievements](https://docs.gitlab.com/user/profile/achievements/)
+
+### Wenn ein GitLab-Job auf einen Runner wartet
+
+Öffne im Projekt **Settings → CI/CD → Runners**. Prüfe, ob ein aktiver Runner verfügbar ist, der Container-Images unterstützt und Jobs ohne Tags annimmt. Die Beispieljobs verwenden `ruby:3.4` und `node:24`.
