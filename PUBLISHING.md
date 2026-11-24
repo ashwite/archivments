@@ -1,14 +1,13 @@
 # Veröffentlichung und Achievements
 
-Das GitLab-Repository ist `ashwite/archivments`. Erstelle zusätzlich auf GitHub ein leeres Repository ohne automatisch erzeugte README. Wähle bewusst, ob der Quellcode öffentlich sichtbar sein soll. Für GitHub Discussions aktiviere unter **Settings → General → Features** die Option **Discussions** und richte die Kategorie **Q&A** ein.
+Das Projekt liegt auf GitLab unter `ashwite/archivments`. Der GitHub-Remote hat denselben Repository-Namen. Für GitHub Discussions aktiviere unter **Settings → General → Features** die Option **Discussions** und richte die Kategorie **Q&A** ein.
 
-Klone den aktuellen Projektstand von GitLab in einen freien Ordner und verbinde ihn mit GitHub:
+Klone das Projekt in einen freien Ordner und füge GitLab als zweiten Remote hinzu:
 
 ```sh
-git clone -o gitlab https://gitlab.com/ashwite/archivments.git ci-bridge
+git clone https://github.com/ashwite/archivments.git ci-bridge
 cd ci-bridge
-git remote add origin https://github.com/DEIN-NAME/ci-bridge.git
-git push -u origin main
+git remote add gitlab https://gitlab.com/ashwite/archivments.git
 ```
 
 Prüfe anschließend **Actions** auf GitHub und **Build → Pipelines** auf GitLab. GitLab benötigt einen verfügbaren Runner mit Container-Unterstützung. Für spätere Änderungen kannst du GitHub als Hauptrepo verwenden und denselben Stand nach GitLab pushen.
