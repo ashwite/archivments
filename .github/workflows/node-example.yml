@@ -1,0 +1,13 @@
+name: Node.js example
+on: push
+jobs:
+  node:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm --prefix examples/node ci
+      - run: npm --prefix examples/node test
+      - run: npm --prefix examples/node run build

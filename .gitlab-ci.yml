@@ -1,0 +1,7 @@
+include:
+  - local: '/examples/gitlab-node.yml'
+
+converter:
+  image: ruby:3.4
+  script:
+    - ruby test/ci_bridge_test.rb

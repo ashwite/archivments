@@ -1,0 +1,17 @@
+name: Conversion bug
+description: Report a problem converting a workflow
+body:
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Minimal workflow
+      description: Remove any credentials and private details.
+      render: yaml
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true

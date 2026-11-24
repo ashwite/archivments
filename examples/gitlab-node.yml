@@ -1,0 +1,22 @@
+---
+workflow:
+  rules:
+  - if: $CI_PIPELINE_SOURCE == "push"
+gha_node:
+  image: node:24
+  script:
+  - |-
+    (
+    set -e
+    npm --prefix examples/node ci
+    )
+  - |-
+    (
+    set -e
+    npm --prefix examples/node test
+    )
+  - |-
+    (
+    set -e
+    npm --prefix examples/node run build
+    )

@@ -1,0 +1,9 @@
+{
+  "name": "ci-bridge-example",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "node --test",
+    "build": "node --check add.js"
+  }
+}

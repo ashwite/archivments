@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+require_relative '../lib/ci_bridge'
+
+if ARGV == ['--help'] || ARGV == ['-h']
+  puts 'Usage: bin/ci-bridge WORKFLOW.yml (writes GitLab CI YAML to stdout)'
+  exit
+end
+unless ARGV.length == 1
+  warn 'Usage: bin/ci-bridge WORKFLOW.yml'
+  exit 2
+end
+
+begin
+  print CIBridge.convert(File.read(ARGV.first))
+rescue SystemCallError, Psych::Exception, CIBridge::Unsupported => error
+  warn "ci-bridge: #{error.message}"
+  exit 1
+end
